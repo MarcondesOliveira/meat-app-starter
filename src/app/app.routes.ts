@@ -6,6 +6,7 @@ import { RestaurantDetailComponent } from './restaurant-detail/restaurant-detail
 import { RestaurantsComponent } from './restaurants/restaurants.component';
 import { HomeComponent } from './home/home.component';
 import {Routes} from '@angular/router'
+import { NotFoundComponent } from 'app/not-found/not-found.component';
 
 export const ROUTES: Routes = [
     {path: '', component: HomeComponent},
@@ -19,5 +20,6 @@ export const ROUTES: Routes = [
     ]},
     {path: 'order', loadChildren: './order/order.module#OrderModule'},
     {path: 'order-summary', component: OrderSummaryComponent},
-    {path: 'about', loadChildren: './about/about.module#AboutModule'}
+    {path: 'about', loadChildren: './about/about.module#AboutModule'},
+    {path: '**', component: NotFoundComponent}
 ]
